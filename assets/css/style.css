@@ -1,0 +1,26 @@
+body{
+background: url("../images/spongebob\ background.jpg");
+background-size: 85%;
+}
+
+.header {
+text-align:center;
+color: yellow;
+font-size: 75px;
+font-weight: bold;
+font-family: Impact, Charcoal, sans-serif;
+}
+
+.questions {
+text-align:left;
+font-size: 45px;
+color:rgb(219, 77, 148);
+font-family: Impact, Charcoal, sans-serif;
+}
+
+.answers {
+text-align:left;
+font-size: 45px;
+font-family: Impact, Charcoal, sans-serif;
+color:rgb(219, 77, 148);
+}
