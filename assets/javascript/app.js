@@ -1,6 +1,98 @@
 //variables(create an array with each question having it's own object)
-var questions = ["Spongebob lives in a pineapple under the sea.", "Squidward owns the Krusty Krab and loves money.", "Mr. Krabs plays the clarinet.", "Spongebob's favorite activity is Jellyfishing.", "Plankton runs the restaurant called the Chum Bucket."]
-//generate random question
+var questionList = [{
+        question: "Spongebob lives in a pineapple under the sea.",
+        answer: true,
+    },
+    {
+        question: "Squidward owns the Krusty Krab and loves money.",
+        answer: false,
+    },
+    {
+        question: "Mr. Krabs plays the clarinet.",
+        answer: false,
+    },
+    {
+        question: "Spongebob's favorite activity is Jellyfishing.",
+        answer: true,
+    },
+    {
+        question: "Plankton runs the restaurant called the Chum Bucket.",
+        answer: true,
+    }
+];
+//create all other variables to reference in js
+var chosenQuestion = [];
+var randomQuestion = chosenQuestion.question;
+
+var trueButton = $("#true");
+var falseButton = $("#false");
+var buttonChoice;
+// var winCounter = 0;
+// var lossCounter = 0;
+
+//create a function that initiates the game
+function initiateGame() {
+    var pushedQuestion = questionList[Math.floor(Math.random() * questionList.length)];
+    console.log(pushedQuestion.question);
+    $("#randomQuestion").text(pushedQuestion.question);
+    var randomAnswer = pushedQuestion.answer;
+    console.log("randomAnswer" + randomAnswer);
+};
+initiateGame();
+
+//if the true button is pushed and the question is true,
+//show an alert saying "Correct"
+
+//if the true button is pushed and the question is false,
+//show an alert saying "Incorrect"
+function buttonPush() {
+    $("#true").on("click", function () {
+        buttonChoice = true;
+        console.log(buttonChoice);
+    });
+
+    $("#false").on("click", function () {
+        buttonChoice = false;
+        console.log(buttonChoice);
+    });
+};
+buttonPush();
+if (buttonChoice === randomAnswer) {
+    alert("Correct!");
+} else {
+    alert("Incorrect!");
+}
+
+
+
+
+// initiateGame();
+//need one last function in order to restart the game 
+//once the question is answered and regenerate new random 
+//question
+
+
+
+
+
+
+
+
+//variables(create an array with each question having it's own object)
+// var questionList = ["Spongebob lives in a pineapple under the sea.", "Squidward owns the Krusty Krab and loves money.", "Mr. Krabs plays the clarinet.", "Spongebob's favorite activity is Jellyfishing.", "Plankton runs the restaurant called the Chum Bucket."];
+// //variable that will hold the randomly generated question
+// var chosenWord = "";
+// //generate the variable for where the chosen word will appear (inputString)
+// var inputString = [];
+// //generate variable for your wins and losses counter 
+// var winCounter = 0;
+// var lossCounter = 0;
+
+
+
+
+//generate function to initiate the game
+//generate random question from questionList
 
 //user guesses true or false
 
